@@ -1,0 +1,74 @@
+.aaher {
+  width: 100vw;
+  heigth: 100vh;
+  transition: 0.2s all ease;
+  font-size: 6em;
+  padding: 0;
+  color: white;
+  font-family: "Yellowtail", sans-serif;
+  text-transform: none;
+  text-align: center;
+  z-index: 1;
+  margin: 0;
+}
+.aaher a {
+  text-decoration: none;
+  color: white;
+}
+
+.mail {
+  margin: 75px 0;
+  font-size: 40px;
+  opacity: 0;
+  transition: 2.5s all ease;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.hei {
+  margin: 100px 0 -75px 0;
+}
+
+button {
+  z-index: 2;
+}
+
+body, html {
+  overflow: hidden;
+  margin: 0;
+  pading: 0;
+  background-color: #4096ee;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  top: calc(50% - 200px);
+}
+
+.btncontainer {
+  position: absolute;
+  height: calc(100vh - 200px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
+}
+
+.link {
+  position: absolute;
+  margin: 3% 3%;
+  top: 0;
+  right: 0;
+}
+.link svg {
+  height: 30px;
+  width: 30px;
+}
+
+.link svg:hover svg {
+  transform: translate3d(10px, 10px, 0);
+}
