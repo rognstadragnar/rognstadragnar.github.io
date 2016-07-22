@@ -1,0 +1,273 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Lato:100';
+#grit {
+  background: url("https://s31.postimg.org/53agk2hp7/footer_lodyas.png");
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Lato";
+  text-transform: lowercase;
+  font-weight: 100;
+  overflow-x: hidden;
+}
+
+body #her {
+  font-size: 8em;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: .5s ease all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  opacity: .5;
+}
+
+#wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: .5s ease all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 1;
+  filter: none;
+  transition: .2s .20s all ease;
+}
+
+#wrapper.clicked {
+  opacity: 0.1;
+}
+
+#ho {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.25em;
+  transition: .5s 1s all ease;
+  margin-bottom: 20px;
+}
+
+#ikonWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
+  margin-top: 10px;
+  transition: .5s .5s all ease;
+}
+
+#github {
+  background: url("../assets/icon/github.svg");
+  background-size: contain;
+  transition: .2s all ease, 1.5s opacity ease;
+}
+
+#mail {
+  background: url("../assets/icon/mail.svg");
+  background-size: contain;
+  transition: .2s all ease, 1.5s opacity ease;
+}
+
+#mailAdr {
+  transition: .2s .2s ease all, .1s ease color;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+.mailPos {
+  transform: translateY(10px);
+}
+
+.ikon {
+  height: 30px;
+  width: 30px;
+  transition: .2s ease all;
+}
+
+.ikon:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.nopacity {
+  opacity: 0;
+}
+
+.red {
+  background: #a61e12;
+}
+
+.blue {
+  background: #1e5799;
+}
+
+.green {
+  background: #548872;
+}
+
+#list ul {
+  display: inline;
+  padding: 0;
+}
+
+#list li {
+  text-align: center;
+  display: inline;
+  letter-spacing: 0.2em;
+  margin-right: 10px;
+  font-size: 0.7em;
+}
+
+#list li:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+#list li:hover {
+  color: #ccc;
+}
+
+#menyTrigger {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  padding: 20px 5px 8px;
+  width: 30px;
+  height: 20px;
+  z-index: 2;
+  cursor: pointer;
+  transition: .25s all ease;
+}
+
+#menyTrigger span {
+  position: absolute;
+  width: 30px;
+  height: 0px;
+  border-bottom: 1px solid WHITE;
+  transition: .25s .05s ease all;
+  opacity: 1;
+}
+
+#menyTrigger span:nth-child(2) {
+  margin-top: 10px;
+  transition-duration: 0.05s;
+  transition-delay: 0;
+}
+
+#menyTrigger span:nth-child(3) {
+  margin-top: 20px;
+}
+
+#menyTrigger.clicked {
+  transform: rotate(-90deg) translateX(-7px) translateY(-8px);
+}
+
+#menyTrigger.clicked span:nth-child(1) {
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) translateY(7px) translateX(7px);
+}
+
+#menyTrigger.clicked span:nth-child(2) {
+  transform-origin: 0 0;
+  opacity: 0;
+}
+
+#menyTrigger.clicked span:nth-child(3) {
+  transform-origin: 0% 0%;
+  transform: rotate(-45deg) translateY(3px) translateX(2px);
+}
+
+#menyTrigger.hover span:nth-child(1) {
+  transform: translateY(1px);
+}
+
+#menyTrigger.hover span:nth-child(3) {
+  transform-origin: 0% 0%;
+  transform: translateY(-1px);
+}
+
+#meny {
+  background: rgba(150, 150, 150, 0.45);
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#meny li {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 4em;
+}
+
+#meny li a {
+  color: white;
+  text-decoration: none;
+}
+
+#meny li a:hover {
+  color: #ddd;
+}
+
+@media screen and (max-height: 600px) {
+  #meny li {
+    font-size: 3em;
+    margin: 10px 0;
+  }
+}
+
+#meny ul {
+  padding: 0;
+  margin: 0;
+  transition: .25s .0s all ease;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#meny ul.clicked {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#meny.clicked {
+  display: flex;
+}
