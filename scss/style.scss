@@ -2,7 +2,7 @@
 
 $opacity: 1;
 #grit{
-  background: url("https://s31.postimg.org/53agk2hp7/footer_lodyas.png");
+  background: url("../assets/grit.png");
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -23,7 +23,7 @@ body{
   overflow-x: hidden;
   #her{
     font-size: 8em;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
   }
@@ -40,7 +40,7 @@ body{
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  opacity: .5;
+  opacity: .75;
 }
 #wrapper {
   position: fixed;
@@ -92,7 +92,11 @@ body{
 }
 #mailAdr{
   transition: .2s .2s ease all, .1s ease color;
-
+  pointer-events: none;
+  &.mailPos{
+    transform: translateY(10px);
+    pointer-events: auto;
+  }
 }
 a{
   color: white;
@@ -101,9 +105,7 @@ a{
     color: #ddd;
   }
 }
-.mailPos{
-  transform: translateY(10px);
-}
+
 
 
 .ikon{
@@ -123,15 +125,19 @@ a{
 .nopacity{opacity: 0};
 
 .red {
-  background: #a61e12;
+  background: #9a2016;
 }
 
 .blue {
-  background: #1e5799;
+  background: #2968b1;
 }
 
 .green {
-  background: #548872;
+  background: #40905e;
+}
+
+.gray {
+    background: #464646;
 }
 
 #list ul{
@@ -163,6 +169,7 @@ a{
   z-index: 2;
   cursor: pointer;
   transition: .25s all ease;
+  pointer-events: none;
   span{
     position: absolute;
    //background: red;
@@ -178,6 +185,9 @@ a{
     }
       &:nth-child(3){
         margin-top: 20px;
+    }
+    &.opacity{
+        pointer-events: auto;
     }
   }
 

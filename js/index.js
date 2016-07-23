@@ -11,8 +11,7 @@ var data = [
   { text: ["R", "G", "N", "R"], class: "red"},
   { text: ["R", "G", "N", "R"], class: "blue"},
   { text: ["R", "G", "N", "R"], class: "green"},
-  { text: ["R", "G", "N", "R"], class: "red"},
-  { text: ["R", "G", "N", "R"], class: "blue"}
+  { text: ["R", "G", "N", "R"], class: "gray"}
 ]
 
 var genNum = function(end, start){
@@ -47,9 +46,9 @@ ho.classList = "nopacity";
 setTimeout(function(){
   ho.classList = "opacity";
 }, 500);
-setTimeout(function(){
+/*setTimeout(function(){
   menyTrigger.classList = "opacity";
-}, 2250);
+}, 2250);*/
 
 setTimeout(function(){
   github.classList.remove("nopacity");
