@@ -12,39 +12,38 @@ var data = [
   { text: ["R", "G", "N", "R"], class: "blue"},
   { text: ["R", "G", "N", "R"], class: "green"},
   { text: ["R", "G", "N", "R"], class: "gray"}
-]
+];
 
 var genNum = function(end, start){
       return Math.floor(Math.random() * (end - start)) + start;
-    }
+};
 
 var num = genNum(data.length, 0);
 
 var putIt = function(el, cnt, time){
-  setTimeout(function(){el.innerHTML += cnt }, time)
-}
+  setTimeout(function(){el.innerHTML += cnt;}, time);
+};
 
 var hallo = function(ar, cl, el, bg){
   el.innerHTML = "";
   this.ar = ar;
   this.el = el;
   this.time = 0;
-  bg.classList = "";
-  bg.classList = cl;
+  bg.classList.add(cl);
   var time = 500;
   for (var i = 0; i < ar.length; i++){
-      time += 150
+      time += 150;
       putIt(el, ar[i], time);
-    };
-
-}
+    }
+};
 
 hallo(data[num].text, data[num].class, her, bg);
-console.log("num: " + num + " and data.length: " + data.length)
-ho.classList = "nopacity";
+console.log("num: " + num + " and data.length: " + data.length + data[num].class)
+//ho.classList = "nopacity";
 
 setTimeout(function(){
-  ho.classList = "opacity";
+  ho.classList.remove("nopacity");
+  ho.classList.add("opacity");
 }, 500);
 /*setTimeout(function(){
   menyTrigger.classList = "opacity";
@@ -53,11 +52,11 @@ setTimeout(function(){
 setTimeout(function(){
   github.classList.remove("nopacity");
   github.classList.add("opacity");
-}, 2000)
+}, 2000);
 setTimeout(function(){
   mail.classList.remove("nopacity");
   mail.classList.add("opacity");
-}, 2600)
+}, 2600);
 
 var clickState = false;
 
@@ -97,4 +96,4 @@ mail.addEventListener("click", function(){
   mailAdr.classList.toggle("nopacity");
   mailAdr.classList.toggle("opacity");
   mailAdr.classList.toggle("mailPos");
-})
+});

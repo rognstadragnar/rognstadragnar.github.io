@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Pacifico|Lato:100';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 #grit {
   background: url("../assets/grit.png");
   width: 100vw;
@@ -86,6 +86,7 @@ body #her {
 #ho {
   width: 100%;
   text-align: center;
+  font-weight: 300;
   letter-spacing: 0.25em;
   transition: .5s 1s all ease;
   margin-bottom: 20px;
@@ -118,6 +119,7 @@ body #her {
 #mailAdr {
   transition: .2s .2s ease all, .1s ease color;
   pointer-events: none;
+  font-weight: 300;
 }
 
 #mailAdr.mailPos {
