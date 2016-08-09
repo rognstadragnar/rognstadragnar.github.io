@@ -38,16 +38,12 @@ var hallo = function(ar, cl, el, bg){
 };
 
 hallo(data[num].text, data[num].class, her, bg);
-console.log("num: " + num + " and data.length: " + data.length + data[num].class)
-//ho.classList = "nopacity";
+
 
 setTimeout(function(){
   ho.classList.remove("nopacity");
   ho.classList.add("opacity");
 }, 500);
-/*setTimeout(function(){
-  menyTrigger.classList = "opacity";
-}, 2250);*/
 
 setTimeout(function(){
   github.classList.remove("nopacity");
