@@ -4,9 +4,7 @@ var her = document.getElementById("her"),
     ikonWrapper = document.getElementById("ikonWrapper"),
     github = document.getElementById("github"),
     mail = document.getElementById("mail"),
-    mailAdr = document.getElementById("mailAdr"),
-    menyTrigger = document.getElementById("menyTrigger");
-
+    mailAdr = document.getElementById("mailAdr");
 var data = [
   { text: ["R", "G", "N", "R"], class: "red"},
   { text: ["R", "G", "N", "R"], class: "blue"},
@@ -54,38 +52,6 @@ setTimeout(function(){
   mail.classList.add("opacity");
 }, 2600);
 
-var clickState = false;
-
-menyTrigger.addEventListener("click", function(){
-  if(clickState){
-    clickState = false;
-  } else {
-    clickState = true;
-  }
-  menyTrigger.classList.remove("hover");
-  menyTrigger.classList.toggle("clicked");
-
-  setTimeout(function(){
-      meny.classList.toggle("clicked");
-      menyUl.classList.toggle("clicked");
-
-  }, 200);
-  setTimeout(function(){
-      menyUl.classList.toggle("clicked");
-
-  }, 300);
-  wrapper.classList.toggle("clicked");
-});
-menyTrigger.addEventListener("mouseenter", function(){
-  if(!clickState){
-    menyTrigger.classList.add("hover");
-  }
-});
-menyTrigger.addEventListener("mouseleave", function(){
-  if(!clickState){
-    menyTrigger.classList.remove("hover");
-  }
-});
 
 
 mail.addEventListener("click", function(){
