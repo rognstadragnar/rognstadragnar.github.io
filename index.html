@@ -1,31 +1,181 @@
 <!DOCTYPE html>
-<html >
+<html lang="no">
   <head>
+    <title>Ragnar Rognstad</title>
     <meta charset="UTF-8">
-    <title>rognstad.me || Ragnar Aasen Rognstad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#444444">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+
+      @-webkit-keyframes color {
+        0% {
+          border-color: hsl(165, 100%, 75%);
+        }
+        33% {
+          border-color: hsl(185, 100%, 75%);
+        }
+        66% {
+          border-color: hsl(145, 100%, 75%);
+        }
+        100% {
+          border-color: hsl(165, 100%, 75%);
+        }
+      }
+
+
+      @keyframes color {
+        0% {
+          border-color: hsl(165, 100%, 75%);
+        }
+        33% {
+          border-color: hsl(185, 100%, 75%);
+        }
+        66% {
+          border-color: hsl(145, 100%, 75%);
+        }
+        100% {
+          border-color: hsl(165, 100%, 75%);
+        }
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin: 0;
+        background: #fff;
+        color: #545c5d;
+        font-size: 18px;
+      }
+
+      h1 {
+        font-weight: 800;
+        margin: 0;
+        font-size: calc(45px + 1vw);
+        line-height: 1em;
+      }
+
+      @media (max-width: 650px) {
+
+
+        h1 {
+          font-size: calc(38px + 1vw);
+        }
+      }
+
+      .h1-span {
+        display: block;
+      }
+
+      li {
+        list-style-type: none
+      }
+
+      li:before {
+        content: "-";
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        overflow: hidden
+      }
+
+      .container:before {
+        content: '';
+        position: absolute;
+        top: 14vw;
+        bottom: -100vh;
+        right: -2vh;
+        border-right: hsl(205, 100%, 75%) 50vw solid;
+        -webkit-animation: color 10s infinite alternate;
+        animation: color 10s infinite alternate;
+        -webkit-transform: rotate(22deg);
+        transform: rotate(22deg);
+      }
+
+      @media (max-width: 650px) {
+
+
+        .container:before {
+          border-right: none;
+          border-bottom: hsl(205, 100%, 75%) 50vh solid;
+          top: -20vh;
+          left: 0;
+          height: 0;
+          /* left: -252vw; */
+          -webkit-transform: rotate(22deg);
+          transform: rotate(22deg);
+        }
+      }
+
+      p {
+        margin: 0 0 .5em 0
+      }
+
+      p:first-of-type {
+        margin-top: 1em;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: inherit;
+        position: relative
+      }
+
+      a:hover:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #545c5d;
+      }
+
+      .content-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        padding: 10vh 10vw;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        max-width: 100%;
+        width: calc(345px + 20vw);
+        box-sizing: border-box
+      }
+
+      @media (min-width: 650px) {
+
+
+        .content-wrapper {
+          left: 0;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="grit"></div>
-    <div id="wrapper">
-        <span id="her" class="opacity"></span>
-        <div id="ho" class="nopacity">Ragnar Aasen Rognstad</div>
-        <div id="ikonWrapper">
-            <a href="http://github.com/rognstadragnar">
-                <div id="github" class="ikon nopacity"></div>
-            </a>
-            <div id="mail" class="ikon nopacity"></div>
-        </div>
-        <a href="mailto:rognstad.ragnar@gmail.com" id="mailAdr" class="nopacity">rognstad.ragnar@gmail.com</a>
+    <div class="container">
+      <div class="content-wrapper">
+        <h1>
+          <span class="h1-span">Ragnar</span>
+          <span class="h1-span">Rognstad</span>
+        </h1>
+        <p>
+          Front-end developer making pretty exciting things pretty and exciting at <a href="">NRK</a>.
+        </p>
+        <p>
+          I'm on <a href="">Github</a> and <a href="">LinkedIn</a>, and I'm capable of recieving <a href="">electronic mail</a>.
+        </p>
+      </div>
     </div>
-    <div id="bg"></div>
-    <script src="js/index.js"></script>
   </body>
 </html>
